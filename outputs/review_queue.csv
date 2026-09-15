@@ -1,0 +1,4 @@
+source_row_index,review_reason,record_id,department,year,amount,status
+7,missing_value,R008,Planning,2023,,complete
+18,missing_value,R019,,2023,40447.24,complete
+33,numeric_anomaly_amount,R034,Planning,2025,999999.0,complete

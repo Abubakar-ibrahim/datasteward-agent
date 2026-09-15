@@ -1,0 +1,14 @@
+{
+  "true_anomalies": [
+    33
+  ],
+  "predicted_anomalies": [
+    33
+  ],
+  "tp": 1,
+  "fp": 0,
+  "fn": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0
+}

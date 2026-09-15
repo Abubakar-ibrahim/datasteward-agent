@@ -1,0 +1,83 @@
+{
+  "profile": {
+    "rows": 80,
+    "columns": 5,
+    "column_names": [
+      "record_id",
+      "department",
+      "year",
+      "amount",
+      "status"
+    ],
+    "missing_cells": 2,
+    "duplicate_rows": 0,
+    "missing_by_column": {
+      "record_id": 0,
+      "department": 1,
+      "year": 0,
+      "amount": 1,
+      "status": 0
+    },
+    "dtypes": {
+      "record_id": "object",
+      "department": "object",
+      "year": "int64",
+      "amount": "float64",
+      "status": "object"
+    }
+  },
+  "quality": {
+    "overall_score": 99.8,
+    "dimensions": {
+      "completeness": 99.5,
+      "uniqueness": 100.0,
+      "validity": 100.0
+    }
+  },
+  "issues": [
+    {
+      "type": "missing",
+      "column": "department",
+      "count": 1,
+      "severity": "medium",
+      "action": "human_review"
+    },
+    {
+      "type": "missing",
+      "column": "amount",
+      "count": 1,
+      "severity": "medium",
+      "action": "human_review"
+    },
+    {
+      "type": "numeric_anomaly",
+      "column": "amount",
+      "count": 1,
+      "severity": "review",
+      "action": "human_review"
+    }
+  ],
+  "anomaly_rows": [
+    33
+  ],
+  "row_flags": {
+    "33": [
+      "numeric_anomaly_amount"
+    ]
+  },
+  "datasteward_audit": {
+    "source_rows": 82,
+    "published_rows": 80,
+    "exact_duplicates_removed": 2,
+    "human_review_rows": 3,
+    "human_publication_approved": true,
+    "review_queue_path": "outputs/review_queue.csv",
+    "tools_executed_before_audit_write": [
+      "prepare_safe_outputs",
+      "analyze_dataset"
+    ],
+    "source_quality_score": 99.0,
+    "published_quality_score": 99.8,
+    "policy": "Only exact duplicates were removed automatically. Missing, invalid and anomalous values were preserved for human review; publication required explicit human approval."
+  }
+}
